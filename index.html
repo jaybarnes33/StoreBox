@@ -1,108 +1,85 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>StoreBox</title>
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>StoreBox</title>
+    </head>
     <body>
-      <div class="container">
-          <div class="row">
-              <div class="form-group my-4">
-                  <label for="name"> Name of Product</label>
-                  <input type="text" id="name" class="form-control">
-                  <p id="invalid" class="text-danger fw-bold" ></p>
-              </div>
-  
-              <div class="form-group my-4 ">
-                  <label for="name">Customer</label>
-                  <input type="text" id="customer" class="form-control">
-                  <p id="invalid" class="text-danger fw-bold" ></p>
-              </div>
+        <header class="header">
+            <nav class="logo">
+                <h1><i class="fa fa-delicious"></i> StoreBox</h1>
+            </nav>
+        </header>
+        <div class="form-container">
+            <form action="#">
+                <div class="form-group">
+                    <label for="name"> Name of Product:</label><br>
+                    <input type="text" id="name" class="form-control">
+                    <p id="invalid" class="text-danger" ></p>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="name"> Customer:</label><br>
+                    <input type="text" id="customer" class="form-control">
+                    <p id="invalid" class="text-danger" ></p>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="name"> Issue:</label><br>
+                    <input type="text" id="issue" class="form-control">
+                    <p id="invalid" class="text-danger" ></p>
+                </div>
 
-              <div class="form-group my-4 ">
-                <label for="name">Issue</label>
-                <input type="text" id="issue" class="form-control">
-                <p id="invalid" class="text-danger fw-bold" ></p>
+                <br><br>
+                <div class="form-group">
+                    <label for="name"> Date IN:</label><br>
+                    <input type="text" id="datein" class="form-control">
+                    <p id="invalid" class="text-danger" ></p>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="name">Date Out:</label><br>
+                    <input type="text" id="dateout" class="form-control">
+                    <p id="invalid" class="text-danger" ></p>
+                </div>
+                <br><br>
+
+                <div class="form-group">
+                    <label for="desc"> Remark:</label><br>
+                    <textarea name="" id="desc" class="form-control"></textarea>
+                </div>  
+            </form>
+            <div class="btn-primary">
+                <button id="addButton" class="addlist"> Add Product </button>
+                <button id="updateButton" class="updatelist"> Update Product </button>
+                <button id="cancelButton" class="cancel-list"> Cancel </button>
             </div>
-
-            <div class="form-group my-4 ">
-              <label for="name">Date In</label>
-              <input type="text" id="datein" class="form-control">
-              <p id="invalid" class="text-danger fw-bold" ></p>
-          </div>
-  
-              <div class="form-group my-4">
-                  <label for="name">Date Out</label>
-                  <input type="text" id="dateout" class="form-control">
-                  <p id="invalid" class="text-danger fw-bold" ></p>
-              </div>
-  
-              <div class="form-group my-4">
-                  <label for="desc">Remark</label>
-                  <textarea name="" id="remark" class="form-control"></textarea>
-              </div>
-              <div>
-                  <p id="invalid" class="text-danger fw-bold" ></p>
-              </div>
-              <div class="my-2">
-                  <button id="addButton" onclick="addFile()" class=" btn btn-primary "> Add Product </button>
-                  <button id="updateButton" onclick="updateFile()" class=" btn btn-success  mx-1  d-none"> Update Product </button>
-                  <button id="cancelButton"   onclick="cancelFile()" class=" btn btn-danger mx-1 d-none"> Cancel </button>
-  
-              </div>
-  
-          </div>
-  
-  
-      </div>
-  
-  <div class="container">
-      <div class="row my-5">
-          <div class="searchInput">
-              <input type="text" onkeyup="searchProducts(this.value)" class="form-control" placeholder="Search"  >
-          </div>
-      </div>
-  </div>
-  
-  
-      <div class="container ">
-  
-          <div class="row my-5">
-              <table class="table">
-                  <thead>
-                      <th>index </th>
-                      <th>Name of Product </th>
-                      <th>Customer </th>
-                      <th> Issue </th>
-                      <th> Date In</th>
-                      <th> Date Out </th>
-                      <th> Remark </th>
-                      <th> Update </th>
-                      <th> Delete</th>
-                  </thead>
-                  <tbody id="tableBody">
-                      <tr class="my-4"> 
-                      <!-- <td>
-                          0
-                      </td>
-                      <td>toshiba</td>
-                      <td>3000</td>
-                      <td>mobile</td>
-                      <td>nice</td> -->
-                  
-                  </tr>
-                  </tbody>
-              </table>
-          </div>
-      </div>
-      <script src="js/bootstrap.bundle.min.js"></script>
-          <script src="js/script.js"></script>
-  
-  </body>
+        </div>
+        <div class="table-container">
+            <div class="searchinput">
+                <input type="text" placeholder="Search">
+                <button class="search"><i class="fa fa-search"></i></button>
+            </div>
+            <table class="table">
+                <thead>
+                    <th>index </th>
+                    <th>Name of Product </th>
+                    <th>Customer </th>
+                    <th> Issue </th>
+                    <th> Date In</th>
+                    <th> Date Out </th>
+                    <th> Remark </th>
+                    <th> Update </th>
+                    <th> Delete</th>
+                </thead>
+                <tbody id="tableBody">
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </html>
