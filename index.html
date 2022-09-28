@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="./img/Capture.PNG">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/Capture.PNG">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>StoreBox</title>
@@ -16,42 +16,42 @@
             </nav>
         </header>
         <div class="form-container">
-            <form action="#">
+            <form action="#" id="form">
                 <div class="form-group">
                     <label for="name"> Name of Product:</label><br>
-                    <input type="text" id="name" class="form-control">
+                    <input type="text" id="name" name="name" class="form-control">
                     <p id="invalid" class="text-danger" ></p>
                 </div>
                 <br><br>
                 <div class="form-group">
                     <label for="name"> Customer:</label><br>
-                    <input type="text" id="customer" class="form-control">
+                    <input type="text" id="customer" name="customer" class="form-control">
                     <p id="invalid" class="text-danger" ></p>
                 </div>
                 <br><br>
                 <div class="form-group">
                     <label for="name"> Issue:</label><br>
-                    <input type="text" id="issue" class="form-control">
+                    <input type="text" id="issue" name="issue" class="form-control">
                     <p id="invalid" class="text-danger" ></p>
                 </div>
 
                 <br><br>
                 <div class="form-group">
                     <label for="name"> Date IN:</label><br>
-                    <input type="text" id="datein" class="form-control">
+                    <input type="text" id="datein" name="in-arrival" class="form-control">
                     <p id="invalid" class="text-danger" ></p>
                 </div>
                 <br><br>
                 <div class="form-group">
                     <label for="name">Date Out:</label><br>
-                    <input type="text" id="dateout" class="form-control">
+                    <input type="text" id="dateout" name="delivery" class="form-control">
                     <p id="invalid" class="text-danger" ></p>
                 </div>
                 <br><br>
 
                 <div class="form-group">
                     <label for="desc"> Remark:</label><br>
-                    <textarea name="" id="desc" class="form-control"></textarea>
+                    <textarea name="" id="desc" name="desc" class="form-control"></textarea>
                 </div>  
             </form>
             <div class="btn-primary">
@@ -82,5 +82,6 @@
                 </tbody>
             </table>
         </div>
+        <script src="app.js"></script>
     </body>
 </html>
